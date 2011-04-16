@@ -53,7 +53,8 @@ module StaticMatic
       
       if File.exists?(config_file)
         config = File.read(config_file)
-        eval(config)
+        #eval(config)
+				Compass.add_project_configuration(config)
       end
 
       # Compass.sass_engine_options.merge!(configuration.sass_options)
